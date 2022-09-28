@@ -1,0 +1,10 @@
+ARG TARGETPLATFORM
+RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
+        export NET_TARGET_PLATFORM_ARG="--runtime linux-x64" ; \
+    elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then \
+        export NET_TARGET_PLATFORM_ARG="--runtime linux-arm64" ; \
+    elif [ "$TARGETPLATFORM" = "linux/arm/v7" ]; then \
+        export NET_TARGET_PLATFORM_ARG="--runtime linux-arm" ; \
+    else \
+         export NET_TARGET_PLATFORM_ARG="" ; \
+    fi
