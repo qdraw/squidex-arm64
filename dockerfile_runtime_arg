@@ -8,3 +8,5 @@ RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
     else \
          export NET_TARGET_PLATFORM_ARG="" ; \
     fi
+
+RUN echo "NET_TARGET_PLATFORM_ARG "$NET_TARGET_PLATFORM_ARG
