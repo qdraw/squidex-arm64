@@ -47,6 +47,16 @@ sed 's/RUN dotnet test/RUN echo "disabled: " dotnet test/' Dockerfile > Dockerfi
 mv Dockerfile.tmp Dockerfile
 # end unit test replace
 
+# publish add
+sed 's/RUN dotnet publish/RUN dotnet publish $NET_TARGET_PLATFORM_ARG/' Dockerfile > Dockerfile.tmp
+mv Dockerfile.tmp Dockerfile
+# end publish replace
+
+# restore add
+sed 's/RUN dotnet restore/RUN dotnet restore $NET_TARGET_PLATFORM_ARG/' Dockerfile > Dockerfile.tmp
+mv Dockerfile.tmp Dockerfile
+# end restore replace
+
 
 >$SCRIPT_DIR"/"$SQUIDEX_REPO_NAME"/Dockerfile.bak"
 while read line
