@@ -12,3 +12,4 @@ RUN if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
 RUN echo "NET_TARGET_PLATFORM_ARG "$NET_TARGET_PLATFORM_ARG
 # https://github.com/elsa-workflows/elsa-core/issues/3114
 ENV ASPNETCORE_hostBuilder__reloadConfigOnChange=false
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
