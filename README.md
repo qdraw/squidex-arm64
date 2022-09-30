@@ -7,3 +7,7 @@ docker pull ghcr.io/qdraw/squidex-arm64:master
 ```
 
 [![Docker buildx multi-arch CI unstable master](https://github.com/qdraw/squidex-arm64/actions/workflows/docker-buildx.yml/badge.svg)](https://github.com/qdraw/squidex-arm64/actions/workflows/docker-buildx.yml)
+
+
+## There are issues with M1 Macs
+Exceptions on startup, so not usefull yet
